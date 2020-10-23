@@ -1,13 +1,13 @@
 
-
+var imgBG;
 var imgApple;
 var imgPeach;
 var emitterPeach1;
 var emitterPeach2;
 var imgBoom;
 
-var good_objects,
-    bad_objects,
+var fruit_objects,
+    boom_objects,
     slashes,
     line,
     scoreLabel,
@@ -19,6 +19,7 @@ var nextFire = 0;
 
 var fruit_state = {
     preload: function () {
+        game.load.image('imgBG', 'assets/background.jpg');
         game.load.image('imgApple', 'assets/fruit/apple.png');
         game.load.image('imgPeach', 'assets/fruit/peach.png');
         game.load.image('imgPeach1', 'assets/fruit/peach-1.png');
@@ -26,13 +27,13 @@ var fruit_state = {
         game.load.image('imgBoom', 'assets/fruit/boom.png');
     },
     create: function () {
-        game.state.backgroundColor = "#a09b9b";
+        imgBG = game.add.tileSprite(0, 0, 800, 480, 'imgBG');
 
         game.physics.startSystem(Phaser.Physics.ARCADE);
         game.physics.arcade.gravity.y = 300;
 
-        good_objects = createGroup(4, 'imgPeach');
-        bad_objects = createGroup(4, 'imgBoom');
+        fruit_objects = createGroup(4, 'imgPeach');
+        boom_objects = createGroup(4, 'imgBoom');
 
         slashes = game.add.graphics(0, 0);
 
@@ -59,7 +60,6 @@ var fruit_state = {
             y: game.input.y
         });
         points = points.splice(points.length-10, points.length);
-        //game.add.sprite(game.input.x, game.input.y, 'hit');
 
         if (points.length<1 || points[0].x==0) {
             return;
@@ -76,10 +76,9 @@ var fruit_state = {
 
         for(var i = 1; i< points.length; i++) {
             line = new Phaser.Line(points[i].x, points[i].y, points[i-1].x, points[i-1].y);
-            game.debug.geom(line);
 
-            good_objects.forEachExists(checkIntersects);
-            bad_objects.forEachExists(checkIntersects);
+            fruit_objects.forEachExists(checkIntersects);
+            boom_objects.forEachExists(checkIntersects);
         }
     }
 }
@@ -96,29 +95,29 @@ function createGroup (numItems, sprite) {
 }
 
 function throwObject() {
-    if (game.time.now > nextFire && good_objects.countDead()>0 && bad_objects.countDead()>0) {
+    if (game.time.now > nextFire && fruit_objects.countDead()>0 && boom_objects.countDead()>0) {
         nextFire = game.time.now + fireRate;
-        throwGoodObject();
+        throwFruitObject();
         if (Math.random()>.5) {
-            throwBadObject();
+            throwBoomObject();
         }
     }
 }
 
-function throwGoodObject() {
-    var obj = good_objects.getFirstDead();
+function throwFruitObject() {
+    var obj = fruit_objects.getFirstDead();
     obj.reset(game.world.centerX + Math.random()*100-Math.random()*100, 600);
     obj.anchor.setTo(0.5, 0.5);
     //obj.body.angularAcceleration = 100;
     game.physics.arcade.moveToXY(obj, game.world.centerX, game.world.centerY, 530);
 }
 
-function throwBadObject() {
-    var obj = bad_objects.getFirstDead();
+function throwBoomObject() {
+    var obj = boom_objects.getFirstDead();
     obj.reset(game.world.centerX + Math.random()*100-Math.random()*100, 600);
     obj.anchor.setTo(0.5, 0.5);
     //obj.body.angularAcceleration = 100;
-    game.physics.arcade.moveToXY(obj, game.world.centerX, game.world.centerY, 530);
+    game.physics.arcade.moveToXY(obj, game.world.centerX, game.world.centerY, 550);
 }
 
 
@@ -139,7 +138,7 @@ function checkIntersects(fruit, callback) {
             return;
         }
 
-        if (fruit.parent == good_objects) {
+        if (fruit.parent == fruit_objects) {
             killFruit(fruit);
         } else {
             resetScore();
@@ -152,8 +151,8 @@ function resetScore() {
     var highscore = Math.max(score, localStorage.getItem("highscore"));
     localStorage.setItem("highscore", highscore);
 
-    good_objects.forEachExists(killFruit);
-    bad_objects.forEachExists(killFruit);
+    fruit_objects.forEachExists(killFruit);
+    boom_objects.forEachExists(killFruit);
 
     score = 0;
     game.state.start('over');

@@ -13,6 +13,8 @@ var imgQuit;
 var emitter3;
 var emitter4;
 var imgDojo;
+var slashes;
+var points = [];
 
 
 
@@ -69,8 +71,8 @@ var load_state = {
         /* Watermelon */
         imgWatermelon = game.add.sprite(200, 300, 'imgWatermelon');
         imgWatermelon.anchor.setTo(0.5, 0.5);
-        imgWatermelon.inputEnabled = true;
-        imgWatermelon.events.onInputDown.add(clickInWatermelon, this);
+        /*imgWatermelon.inputEnabled = true;
+        imgWatermelon.events.onInputDown.add(clickInWatermelon, this);*/
 
         emitter1 = game.add.emitter(0, 0, 100);
         emitter1.makeParticles('imgWatermelon1');
@@ -110,20 +112,61 @@ var load_state = {
         imgNewGame.angle += 1;
         imgApple.angle += 3;
         imgQuit.angle += 1.5;
+
+        /* */
+        points.push({
+            x: game.input.x,
+            y: game.input.y,
+        });
+
+        points = points.splice(points.length-10, points.length);
+        if (points.length<1 || points[0].x==0) {
+            return;
+        }
+
+        slashes.clear();
+        slashes.beginFill(0xFFFFFF);
+        slashes.alpha = .5;
+        slashes.moveTo(points[0].x, points[0].y);
+        for (var i=1; i<points.length; i++) {
+            slashes.lineTo(points[i].x, points[i].y);
+        }
+        slashes.endFill();
+
+        for(var i = 1; i< points.length; i++) {
+            line = new Phaser.Line(points[i].x, points[i].y, points[i-1].x, points[i-1].y);
+
+            imgWatermelon.forEachExists(startPlayScreen);
+        }
     }
 }
 
-function clickInWatermelon() {
-    particleBurst();
-    loadStateMenu();
+function startPlayScreen(fruit) {
+    var l1 = new Phaser.Line(fruit.body.right - fruit.width, fruit.body.bottom - fruit.height, fruit.body.right, fruit.body.bottom);
+    var l2 = new Phaser.Line(fruit.body.right - fruit.width, fruit.body.bottom, fruit.body.right, fruit.body.bottom-fruit.height);
+    l2.angle = 90;
+
+    if(Phaser.Line.intersects(line, l1, true) ||
+        Phaser.Line.intersects(line, l2, true)) {
+
+        contactPoint.x = game.input.x;
+        contactPoint.y = game.input.y;
+        var distance = Phaser.Point.distance(contactPoint, new Phaser.Point(fruit.x, fruit.y));
+        if (Phaser.Point.distance(contactPoint, new Phaser.Point(fruit.x, fruit.y)) > 110) {
+            return;
+        }
+
+        if (fruit.parent == imgWatermelon) {
+            game.state.start('fruit');
+        } else {
+
+        }
+    }
+
 }
 
 function clickInApple() {
     particleBurst2();
-}
-
-function loadStateMenu() {
-    this.game.state.start('play');
 }
 
 function particleBurst() {

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c197e4d1-05fe-4fa9-b1bf-6b7042e3e642" name="Default Changelist" comment="" />
+    <list default="true" id="c197e4d1-05fe-4fa9-b1bf-6b7042e3e642" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruit.js" beforeDir="false" afterPath="$PROJECT_DIR$/fruit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load.js" beforeDir="false" afterPath="$PROJECT_DIR$/load.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +19,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1jAkjF3lZqxTyt9GLjyiw3088DZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -24,7 +32,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Fruit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../game_breakout-master" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -48,7 +57,7 @@
       <updated>1603254417089</updated>
       <workItem from="1603254418164" duration="17022000" />
       <workItem from="1603330714352" duration="24060000" />
-      <workItem from="1603417548948" duration="7071000" />
+      <workItem from="1603417548948" duration="13133000" />
     </task>
     <servers />
   </component>
@@ -56,9 +65,21 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="472" key="FileChooserDialogImpl" timestamp="1603357854929">
+    <state x="740" y="472" key="FileChooserDialogImpl" timestamp="1603428259011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="472" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603357854929" />
+    <state x="740" y="472" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603428259011" />
+    <state x="838" y="418" key="Github.ShareDialog" timestamp="1603428195730">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="838" y="418" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603428195730" />
+    <state x="756" y="225" key="Github.UntrackedFilesDialog" timestamp="1603428208777">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603428208777" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1603428130018">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603428130018" />
   </component>
 </project>
