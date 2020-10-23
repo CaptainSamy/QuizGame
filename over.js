@@ -10,6 +10,7 @@ var over_state = {
     create: function() {
         imgBackground = game.add.tileSprite(0, 0, 800, 480, 'imgBackground');
         imgGameOver = game.add.sprite(150, 220, 'imgGameOver');
-    },
+
+    }
 
 }
