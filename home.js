@@ -11,7 +11,6 @@ var imgQuit;
 var imgDojo;
 var slashes;
 var points = [];
-var popup;
 
 var home_state = {
     preload: function() {
@@ -139,23 +138,6 @@ var home_state = {
             game.add.tween(imgQuit).to( {alpha: 1 }, 1000, Phaser.Easing.Linear.None, true);
         }, 3000);
 
-        /* popup*/
-        popup = game.add.sprite(200, 100, 'imgBackground');
-        popup.anchor.set(0.2);
-        popup.inputEnabled = true;
-        popup.input.enableDrag();
-
-        var  pw = (popup.width / 2) - 30;
-        var ph = (popup.height / 2) - 8;
-
-        var closeBtn = game.make.sprite(pw, -ph, 'imgClose');
-        closeBtn.inputEnabled = true;
-        closeBtn.input.priorityID = 1;
-        closeBtn.events.onInputDown.add(closePopup, this);
-
-        popup.addChild(closeBtn); // add in popup
-        popup.scale.set(0);
-
     },
     update: function () {
         /* Rotation */
@@ -177,23 +159,8 @@ function clickApple() {
 }
 
 function clickBoom() {
-    game.input.onDown.add(openWindow, this);
+
 }
 
-var tween;
-function openWindow() {
-    if ((tween && tween.isRunning) || popup.scale.x === 1) {
-        return ;
-    }
-    tween = game.add.tween(popup.scale).to( { x: 1, y: 1 }, 1000, Phaser.Easing.Elastic.Out, true);
-}
-
-function closePopup() {
-    if (tween.isRunning || popup.scale.x === 0)
-    {
-        return;
-    }
-    tween = game.add.tween(popup.scale).to( { x: 0, y: 0 }, 500, Phaser.Easing.Elastic.In, true);
-}
 
 

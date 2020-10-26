@@ -108,15 +108,13 @@ function throwFruitObject() {
     var obj = fruit_objects.getFirstDead();
     obj.reset(game.world.centerX + Math.random()*100-Math.random()*100, 600);
     obj.anchor.setTo(0.5, 0.5);
-    //obj.body.angularAcceleration = 100;
     game.physics.arcade.moveToXY(obj, game.world.centerX, game.world.centerY, 530);
 }
 
 function throwBoomObject() {
     var obj = boom_objects.getFirstDead();
-    obj.reset(game.world.centerX + Math.random()*100-Math.random()*100, 600);
+    obj.reset(game.world.centerX + Math.random()*100-Math.random()*100, 550);
     obj.anchor.setTo(0.5, 0.5);
-    //obj.body.angularAcceleration = 100;
     game.physics.arcade.moveToXY(obj, game.world.centerX, game.world.centerY, 550);
 }
 

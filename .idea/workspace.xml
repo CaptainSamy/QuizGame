@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c197e4d1-05fe-4fa9-b1bf-6b7042e3e642" name="Default Changelist" comment="update">
+    <list default="true" id="c197e4d1-05fe-4fa9-b1bf-6b7042e3e642" name="Default Changelist" comment="update1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load.js" beforeDir="false" afterPath="$PROJECT_DIR$/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/over.js" beforeDir="false" afterPath="$PROJECT_DIR$/over.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruit.js" beforeDir="false" afterPath="$PROJECT_DIR$/fruit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +32,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fruit-ninja" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fruitsplashgamedemo" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -59,7 +57,9 @@
       <updated>1603254417089</updated>
       <workItem from="1603254418164" duration="17022000" />
       <workItem from="1603330714352" duration="24060000" />
-      <workItem from="1603417548948" duration="21766000" />
+      <workItem from="1603417548948" duration="23148000" />
+      <workItem from="1603676293475" duration="233000" />
+      <workItem from="1603676540338" duration="2218000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1603439234863</created>
@@ -68,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603439234863</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update1">
+      <created>1603447971590</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603447971590</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,13 +83,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update1" />
+    <option name="LAST_COMMIT_MESSAGE" value="update1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="472" key="FileChooserDialogImpl" timestamp="1603440679037">
+    <state x="740" y="472" key="FileChooserDialogImpl" timestamp="1603449088524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="472" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603440679037" />
+    <state x="740" y="472" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603449088524" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1603428195730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -91,13 +99,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603428208777" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1603428130018">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1603677564236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603428130018" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603439249360">
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603677564236" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603448619020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603439249360" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603448619020" />
   </component>
 </project>
