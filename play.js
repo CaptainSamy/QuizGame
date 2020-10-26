@@ -2,16 +2,22 @@
 var imgBackground;
 var txtTime;
 var timer;
-var totalTime = 10;
+var totalTime = 15;
 var txtQuestion;
-var imgApple;
-var imgBanana;
-var imgBasaha;
-var imgBoom;
-var imgSandia;
-var imgPeach;
+var imgAnswerA;
+var imgAnswerB;
+var imgAnswerC;
+var imgAnswerD;
 var positionQuestion = 0;
-var questionText = ["1.Quả gì như chú heo con\nDa xanh ruột đỏ ngọt ngon khi già\nĂn rồi nhớ lắm người xa\nCó chàng hoàng tử tìm ra giống này ?", "2.", "3."];
+var questionText = [
+    "1.Quả gì như chú heo con\nDa xanh ruột đỏ ngọt ngon khi già\nĂn rồi nhớ lắm người xa\nCó chàng hoàng tử tìm ra giống này ?",
+    "2.Quả gì xanh, đỏ, tím, hồng\nThích bay cùng bé tưng bừng ngày vui ?",
+    "3."
+];
+
+var answerText = [
+
+];
 
 
 var play_state = {
@@ -35,53 +41,70 @@ var play_state = {
             align: "center"
         });
 
-        imgPeach = game.add.sprite(250, -50, 'imgPeach');
-        imgPeach.anchor.setTo(0.5, 0.5);
-        imgBanana = game.add.sprite(100, 700, 'imgBanana');
-        imgSandia = game.add.sprite(450, 700, 'imgSandia');
-        imgBoom = game.add.sprite(650, 700, 'imgBoom');
-
+        setAnswer("imgSandia", "imgBoom", "imgBanana", "imgBasaha");
         countdownTime();
 
-
-        txtQuestion = game.add.text(170, -50, "Câu "+questionText[positionQuestion], {
+        textStyleQuestion = {
             font: "25px Arial",
             fill: "#d6c349",
             align: "center"
-        });
-        game.add.tween(txtQuestion).to({y: 50}, 3000, Phaser.Easing.Bounce.Out, true);
+        }
+
+        txtQuestion = game.add.text(170, -50, "Câu "+questionText[positionQuestion], textStyleQuestion);
+        game.add.tween(txtQuestion).to({y: 50}, 2000, Phaser.Easing.Bounce.Out, true);
 
 
         /* Transition Fruit */
-        game.add.tween(imgPeach).to({y: 250}, 3000, Phaser.Easing.Bounce.Out, true);
-
-        setTimeout(() => {game.add.tween(imgBanana).to({y: 300}, 3000, Phaser.Easing.Quadratic.InOut, true, 0, 1000, true);}, 1000);
-        setTimeout(() => {game.add.tween(imgSandia).to({y: 200}, 3000, Phaser.Easing.Quadratic.InOut, true, 0, 1000, true);}, 500);
-        setTimeout(() => {game.add.tween(imgBoom).to({y: 250}, 3000, Phaser.Easing.Quadratic.InOut, true, 0, 1000, true);}, 600);
-
+        game.add.tween(imgAnswerA).to({y: 300}, 3000, Phaser.Easing.Bounce.Out, true);
+        setTimeout(() => {
+            game.add.tween(imgAnswerB).to({y: 300}, 3000, Phaser.Easing.Bounce.Out, true);
+            }, 1000);
+        setTimeout(() => {
+            game.add.tween(imgAnswerC).to({y: 300}, 3000, Phaser.Easing.Bounce.Out, true);
+            }, 500);
+        setTimeout(() => {
+            game.add.tween(imgAnswerD).to({y: 300}, 3000, Phaser.Easing.Bounce.Out, true);
+            }, 600);
     },
     update: function() {
-        imgPeach.angle += 1;
-        imgBanana.angle -= 1.5;
-        imgSandia.angle += 0.5;
-        imgBoom.angle += 2;
-
+        imgAnswerA.angle += 1;
+        imgAnswerB.angle -= 1.5;
+        imgAnswerC.angle += 0.5;
+        imgAnswerD.angle += 2;
     }
 }
 
 function updateCounter() {
-    if (totalTime > 0) {
-        totalTime--;
-        txtTime.setText("Time: " + totalTime + "s");
-    } else if (totalTime == 0) {
-        this.game.state.start('over');
-    }
+    totalTime--;
+    txtTime.setText("Time: " + totalTime + "s");
+}
+
+function changeQuestion() {
+    totalTime = 15;
+    positionQuestion++;
+    txtQuestion.setText("Câu "+questionText[positionQuestion]);
+    updateCounter();
 }
 
 function countdownTime() {
     timer = game.time.create(false);
     timer.loop(1000, updateCounter, this);
+    timer.add(15000, changeQuestion, this);
     timer.start();
+}
+
+function setAnswer(imgA, imgB, imgC, imgD) {
+    imgAnswerA = game.add.sprite(100, -100, imgA);
+    imgAnswerA.anchor.set(0.5, 0.5);
+
+    imgAnswerB = game.add.sprite(250, -100, imgB);
+    imgAnswerB.anchor.set(0.5, 0.5);
+
+    imgAnswerC = game.add.sprite(450, -100, imgC);
+    imgAnswerC.anchor.set(0.5, 0.5);
+
+    imgAnswerD = game.add.sprite(650, -100, imgD);
+    imgAnswerD.anchor.set(0.5, 0.5);
 }
 
 

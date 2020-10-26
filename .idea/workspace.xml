@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c197e4d1-05fe-4fa9-b1bf-6b7042e3e642" name="Default Changelist" comment="update1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fruit.js" beforeDir="false" afterPath="$PROJECT_DIR$/fruit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/over.js" beforeDir="false" afterPath="$PROJECT_DIR$/over.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/play.js" beforeDir="false" afterPath="$PROJECT_DIR$/play.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +52,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fruitsplashgamedemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../breakout" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -59,7 +79,7 @@
       <workItem from="1603330714352" duration="24060000" />
       <workItem from="1603417548948" duration="23148000" />
       <workItem from="1603676293475" duration="233000" />
-      <workItem from="1603676540338" duration="2218000" />
+      <workItem from="1603676540338" duration="26262000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1603439234863</created>
@@ -75,11 +95,29 @@
       <option name="project" value="LOCAL" />
       <updated>1603447971590</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update1">
+      <created>1603678788608</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603678788608</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
@@ -87,10 +125,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="update1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="472" key="FileChooserDialogImpl" timestamp="1603449088524">
+    <state x="740" y="472" key="FileChooserDialogImpl" timestamp="1603698470429">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="472" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603449088524" />
+    <state x="740" y="472" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603698470429" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1603428195730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -103,9 +141,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603677564236" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603448619020">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603678798661">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603448619020" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603678798661" />
   </component>
 </project>

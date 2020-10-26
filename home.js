@@ -9,8 +9,6 @@ var imgWatermelon;
 var imgNewGame;
 var imgQuit;
 var imgDojo;
-var slashes;
-var points = [];
 
 var home_state = {
     preload: function() {
@@ -146,9 +144,9 @@ var home_state = {
         imgApple.angle += 3;
         imgDojo.angle += 1.5;
         imgQuit.angle += 1.7;
-
     }
 }
+
 
 function clickWatermelon() {
     game.state.start('fruit');
@@ -161,6 +159,7 @@ function clickApple() {
 function clickBoom() {
 
 }
+
 
 
 
