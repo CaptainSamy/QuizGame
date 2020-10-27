@@ -19,12 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c197e4d1-05fe-4fa9-b1bf-6b7042e3e642" name="Default Changelist" comment="update1">
+    <list default="true" id="c197e4d1-05fe-4fa9-b1bf-6b7042e3e642" name="Default Changelist" comment="update2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/muzzleflash3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/octopus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/octopus.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fruit.js" beforeDir="false" afterPath="$PROJECT_DIR$/fruit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/over.js" beforeDir="false" afterPath="$PROJECT_DIR$/over.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/play.js" beforeDir="false" afterPath="$PROJECT_DIR$/play.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,19 +55,21 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../breakout" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/source" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\WebstormProjects\QuizGame\assets" />
+      <recent name="C:\Users\Admin\WebstormProjects\QuizGame\assets\particle" />
+      <recent name="C:\Users\Admin\WebstormProjects\QuizGame" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\WebstormProjects\QuizGame\assets\particle" />
       <recent name="C:\Users\Admin\WebstormProjects\QuizGame" />
       <recent name="C:\Users\Admin\WebstormProjects\QuizGame\html" />
       <recent name="C:\Users\Admin\WebstormProjects\QuizGame\phaser" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\WebstormProjects\QuizGame\assets" />
-      <recent name="C:\Users\Admin\WebstormProjects\QuizGame" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -79,7 +84,9 @@
       <workItem from="1603330714352" duration="24060000" />
       <workItem from="1603417548948" duration="23148000" />
       <workItem from="1603676293475" duration="233000" />
-      <workItem from="1603676540338" duration="26262000" />
+      <workItem from="1603676540338" duration="26762000" />
+      <workItem from="1603762655876" duration="83000" />
+      <workItem from="1603762760225" duration="15278000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1603439234863</created>
@@ -102,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603678788608</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update2">
+      <created>1603708178847</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603708178847</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,17 +132,23 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="update1" />
-    <option name="LAST_COMMIT_MESSAGE" value="update1" />
+    <MESSAGE value="update2" />
+    <option name="LAST_COMMIT_MESSAGE" value="update2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="472" key="FileChooserDialogImpl" timestamp="1603698470429">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603770755551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="472" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603698470429" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603770755551" />
+    <state x="740" y="472" key="FileChooserDialogImpl" timestamp="1603783153849">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="472" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603783153849" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1603428195730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -141,9 +161,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603677564236" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603678798661">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603708190888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603678798661" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603708190888" />
   </component>
 </project>

@@ -58,13 +58,13 @@ var play_state = {
         game.add.tween(imgAnswerA).to({y: 300}, 3000, Phaser.Easing.Bounce.Out, true);
         setTimeout(() => {
             game.add.tween(imgAnswerB).to({y: 300}, 3000, Phaser.Easing.Bounce.Out, true);
-            }, 1000);
+        }, 1000);
         setTimeout(() => {
             game.add.tween(imgAnswerC).to({y: 300}, 3000, Phaser.Easing.Bounce.Out, true);
-            }, 500);
+        }, 500);
         setTimeout(() => {
             game.add.tween(imgAnswerD).to({y: 300}, 3000, Phaser.Easing.Bounce.Out, true);
-            }, 600);
+        }, 600);
     },
     update: function() {
         imgAnswerA.angle += 1;

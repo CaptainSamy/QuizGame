@@ -45,7 +45,7 @@ var home_state = {
         imgLogo.alpha = 0;
         setTimeout(() => {
             game.add.tween(imgLogo).to({x: 100}, 1500, Phaser.Easing.Bounce.Out, true);
-            }, 1000);
+        }, 1000);
         game.add.tween(imgLogo).to( {alpha: 1 }, 3000, Phaser.Easing.Linear.None, true, 0, 1000, true);
         /**/
 
@@ -88,6 +88,8 @@ var home_state = {
             game.add.tween(imgWatermelon).to( {alpha: 1 }, 1000, Phaser.Easing.Linear.None, true);
         }, 3000);
         imgWatermelon.events.onInputDown.add(clickWatermelon, this);
+
+        //imgWatermelon.visible = false;
         /**/
 
         /* Image Apple*/
@@ -99,6 +101,8 @@ var home_state = {
             game.add.tween(imgApple).to( {alpha: 1 }, 1000, Phaser.Easing.Linear.None, true);
         }, 3000);
         imgApple.events.onInputDown.add(clickApple, this); // ham chua hanh dong chuyen man
+
+        //imgApple.visible = false;
         /**/
 
         /* Image Boom*/
@@ -110,6 +114,8 @@ var home_state = {
             game.add.tween(imgBoom).to( {alpha: 1 }, 1000, Phaser.Easing.Linear.None, true);
         }, 3000);
         imgBoom.events.onInputDown.add(clickBoom, this);
+
+        //imgBoom.visible = false;
         /**/
 
         /* Image NewGame */
@@ -120,6 +126,8 @@ var home_state = {
             game.add.tween(imgNewGame).to( {alpha: 1 }, 1000, Phaser.Easing.Linear.None, true);
         }, 3000);
 
+        //imgNewGame.visible = false;
+
         /* Image Dojo*/
         imgDojo = game.add.sprite(400, 280, 'imgDojo');
         imgDojo.anchor.setTo(0.5, 0.5);
@@ -128,6 +136,8 @@ var home_state = {
             game.add.tween(imgDojo).to( {alpha: 1 }, 1000, Phaser.Easing.Linear.None, true);
         }, 3000);
 
+        //imgDojo.visible = false;
+
         /* Image Quit */
         imgQuit = game.add.sprite(600, 300, 'imgQuit');
         imgQuit.anchor.setTo(0.5, 0.5);
@@ -135,6 +145,17 @@ var home_state = {
         setTimeout(() => {
             game.add.tween(imgQuit).to( {alpha: 1 }, 1000, Phaser.Easing.Linear.None, true);
         }, 3000);
+
+        //imgQuit.visible = false;
+
+        /**/
+        game.add.text( 350, 400, "Tap to play!", {
+            font: '25px Arial',
+            fill: '#ffffff'
+        });
+        game.input.onDown.addOnce(() => {
+            game.state.start('fruit');
+        }, this);
 
     },
     update: function () {

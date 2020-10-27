@@ -1,4 +1,3 @@
-
 var imgBG;
 var imgApple;
 var emitterApple1, emitterApple2;
@@ -7,6 +6,7 @@ var emitterBasaha1, emitterBasaha2;
 var imgPeach;
 var emitterPeach1, emitterPeach2;
 var imgBoom;
+var imgScore;
 
 var x, xx, xxx;
 var lives = 3;
@@ -40,9 +40,12 @@ var fruit_state = {
         game.load.image('imgXX', 'assets/xx.png');
         game.load.image('imgXXXF', 'assets/xxxf.png');
         game.load.image('imgXXX', 'assets/xxx.png');
+        game.load.image('imgScore', 'assets/score.png');
     },
     create: function () {
         imgBG = game.add.tileSprite(0, 0, 800, 480, 'imgBG');
+
+        imgScore = game.add.sprite(20, 16, 'imgScore');
 
         game.physics.startSystem(Phaser.Physics.ARCADE);
         game.physics.arcade.gravity.y = 300;
@@ -58,7 +61,7 @@ var fruit_state = {
 
         slashes = game.add.graphics(0, 0);
 
-        scoreLabel = game.add.text(10,10,'Score:');
+        scoreLabel = game.add.text(60,20,'');
         scoreLabel.fill = 'white';
 
         /* Add emitter fruit - tao ham rieng bi loi */
@@ -141,10 +144,10 @@ function createGroup (numItems, sprite) {
 
 function throwObject() {
     if (game.time.now > nextFire &&
-            peach_objects.countDead()>0 &&
-                apple_objects.countDead()>0 &&
-                    basaha_objects.countDead()>0 &&
-                        boom_objects.countDead()>0)
+        peach_objects.countDead()>0 &&
+        apple_objects.countDead()>0 &&
+        basaha_objects.countDead()>0 &&
+        boom_objects.countDead()>0)
     {
         nextFire = game.time.now + fireRate;
         thrownAppleObject();
@@ -227,17 +230,9 @@ function resetScore() {
         game.state.start('over');
     }
 
-    var highscore = Math.max(score, localStorage.getItem("highscore"));
-    localStorage.setItem("highscore", highscore);
-
     apple_objects.forEachExists(killFruit);
     peach_objects.forEachExists(killFruit);
     boom_objects.forEachExists(killFruit);
-
-    // score = 0;
-    // game.state.start('over');
-    //scoreLabel.text = 'Game Over!\nHigh Score: '+highscore;
-    // Retrieve
 }
 
 function setEmitter(emitter1, emitter2, fruit) {
@@ -265,10 +260,9 @@ function killFruit(fruit) {
     fruit.kill();
     points = [];
     score++;
-    scoreLabel.text = 'Score: ' + score;
+    scoreLabel.text = '' + score;
 }
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
-
